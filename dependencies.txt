@@ -1,1 +1,12 @@
+git
 curl
+vim
+htop
+make
+cmake
+gcc
+g++
+maven
+default-jdk
+stow
+zsh

@@ -21,8 +21,20 @@ apt_install() {
     fi
 }
 
+sudo apt update -y
+
 input="./dependencies.txt"
 while IFS= read -r line
 do
     apt_install $line
 done < "$input"
+
+echo_green "Installing oh-my-zsh"
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+echo_green "Setting up zsh"
+chsh -s $(which zsh)
+#cp ./zsh/.zshrc $HOME/.zshrc
+#rm -rf $HOME/.zshrc
