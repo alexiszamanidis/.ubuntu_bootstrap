@@ -7,6 +7,9 @@ plugins=(
     docker-compose
     extract
     git
+    node
+    npm
+    yarn
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-z

@@ -2,10 +2,9 @@ git
 curl
 vim
 htop
-make
-cmake
-gcc
-g++
+nodejs
+npm
+yarn
 maven
 default-jdk
 stow
