@@ -1,19 +1,41 @@
 export ZSH="/home/alexzam/.oh-my-zsh"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history ram time)
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_SHORTEN_DELIMITER=".."
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="robbyrussell"
 
 plugins=(
+    docker
+    docker-compose
+    extract
     git
     zsh-autosuggestions
     zsh-syntax-highlighting
-    extract
+    zsh-z
 )
 
 source $ZSH/oh-my-zsh.sh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# stow (th stands for target=home)
+stowth() {
+    stow -vSt ~ $1
+}
+
+unstowth() {
+    stow -vDt ~ $1
+}
+
+# source global aliases
+if [ -f "$HOME/.yarn_aliases" ] ; then
+    source "$HOME/.yarn_aliases"
+fi
+
+if [ -f "$HOME/.npm_aliases" ] ; then
+    source "$HOME/.npm_aliases"
+fi
+
+if [ -f "$HOME/.bash_aliases" ] ; then
+    source "$HOME/.bash_aliases"
+fi
+
+if [ -f "$HOME/.git_aliases" ] ; then
+    source "$HOME/.git_aliases"
+fi

@@ -31,11 +31,13 @@ done < "$input"
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo_green "Installing oh-my-zsh"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
     echo_green "Installing zsh-autosuggestions"
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
     echo_green "Installing zsh-syntax-highlighting"
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+    echo_green "Installing zsh-z"
+    git clone https://github.com/agkozak/zsh-z ~/.oh-my-zsh/custom/plugins/zsh-z
 else
     echo_red "oh-my-zsh is already installed"
 fi
@@ -43,6 +45,8 @@ fi
 echo_green "Setting up our System"
 # link all dotfiles
 cd .dotfiles
+# remove default .zshrc file
+rm ~/.zshrc
 # unlink all files
 stow -vDt ~ bash git zsh
 # link all files
