@@ -5,6 +5,8 @@ This repository contains a script that sets up a new Ubuntu System, as it instal
 -   Bootstrap your new Ubuntu System
 -   Never reconfigure your System ever again
 
+**The script is generic so that everyone can download and configure their system** as soon as possible. It will ask you to give your GIT Full name, GIT email and UNIX username.
+
 **Tested on a new unmodified Windows Subsystem - Ubuntu 20.04 LTS**
 
 ### Usage
@@ -21,13 +23,13 @@ After running the installation commands open a new terminal.
 
 If you are using `Windows Subsystem for Linux` you can download **Windows Terminal** from **Microsoft Store**.
 
-Set your Ubuntu System as default:
+**Set your Ubuntu System as default**:
 
 -   Open Windows Terminal Settings
 -   Copy `guid` from your Ubuntu profile
 -   Paste the `guid` you just copied to `defaultProfile` field
 
-Fix Font problems:
+**Fix Font problems**:
 
 -   Open Windows Terminal Settings
 -   Add `"fontFace": "FuraMono Nerd Font"` to your Ubuntu profile
