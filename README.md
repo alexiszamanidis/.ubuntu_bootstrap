@@ -9,25 +9,13 @@ This repository contains a script that sets up a new Ubuntu System, as it instal
 
 ### Usage
 
-First of all, clone the repository
-
 ```
 git clone https://github.com/alexiszamanidis/.ubuntu_bootstrap.git ~/.ubuntu_bootstrap
-```
-
-After cloning the repository, we have to make some changes before the installation, so make sure to replace:
-
--   inside `~/.ubuntu_bootstrap/.dotfiles/git/.gitconfig` file the name and email with your own
--   inside `~/.ubuntu_bootstrap/.dotfiles/zsh/.zshrc` file the **alexzam** from export ZSH="/home/**alexzam**/.oh-my-zsh", which is my UNIX username with yours
-
-Ιn the end just run the installation commands
-
-```
 cd ~/.ubuntu_bootstrap
 bash install.sh
 ```
 
-After running the installation commands open a new terminal!
+After running the installation commands open a new terminal.
 
 ### Windows Terminal
 

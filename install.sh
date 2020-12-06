@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# read user input
+read -p "Git Full name: " git_full_name
+read -p "Git Email: " git_email
+read -p "UNIX Username: " unix_username
+
+# prepare zsh file replacement
+zshOld="export ZSH=\"\/home\/\/.oh-my-zsh\""
+zshNew="export ZSH=\"\/home\/${unix_username}\/.oh-my-zsh\""
+
+# process .gitconfig and .zshrc files based on user input
+sed -i "s/name = /name = ${git_full_name}/g" ~/.ubuntu_bootstrap/.dotfiles/git/.gitconfig
+sed -i "s/email = /email = ${git_email}/g" ~/.ubuntu_bootstrap/.dotfiles/git/.gitconfig
+sed -i "s/${zshOld}/${zshNew}/g" ~/.ubuntu_bootstrap/.dotfiles/zsh/.zshrc
+
 colorful_echo() {
     GREEN="\033[0;32m"
     RED="\033[0;31m"
