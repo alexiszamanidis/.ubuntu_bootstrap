@@ -14,37 +14,20 @@ sed -i "s/name = /name = ${git_full_name}/g" ~/.ubuntu_bootstrap/.dotfiles/git/.
 sed -i "s/email = /email = ${git_email}/g" ~/.ubuntu_bootstrap/.dotfiles/git/.gitconfig
 sed -i "s/${zshOld}/${zshNew}/g" ~/.ubuntu_bootstrap/.dotfiles/zsh/.zshrc
 
-colorful_echo() {
-    GREEN="\033[0;32m"
-    RED="\033[0;31m"
-    NC="\033[0m" # No Color
+# load functions.sh
+source ./functions.sh
 
-    if [ "$#" -eq 1 ]; then
-        echo -e $1
-    elif [ "$2" = "GREEN" ]; then
-        echo -e "${GREEN}$1${NC}"
-    elif [ "$2" = "RED" ]; then
-        echo -e "${RED}$1${NC}"
-    fi
-}
-
-apt_install() {
-    if hash $1 2>/dev/null; then
-        colorful_echo "$1 is already installed" "RED"
-    else
-        colorful_echo "Installing $1" "GREEN"
-        sudo apt-get install -y $1
-    fi
-}
-
+# updates the package lists for upgrades for packages that need upgrading
 sudo apt update -y
 
+# install all the dependencies
 input="./dependencies.txt"
 while IFS= read -r line
 do
     apt_install $line
 done < "$input"
 
+# install .oh-my-zsh and its plugins
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     colorful_echo "Installing oh-my-zsh" "GREEN"
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
@@ -59,7 +42,6 @@ else
 fi
 
 colorful_echo "Setting up our System" "GREEN"
-# link all dotfiles
 cd .dotfiles
 # remove default .zshrc file
 rm ~/.zshrc
