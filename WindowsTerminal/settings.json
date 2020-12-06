@@ -1,0 +1,61 @@
+{
+    "profiles": {
+        "defaults": {
+            "useAcrylic": true,
+            "acrylicOpacity": 0.7,
+            "fontFace": "Anonymice Nerd Font",
+            "fontSize": 18,
+            "colorScheme": "alexzam",
+            "padding": "4, 4, 4, 4"
+        }
+    },
+    "schemes": [
+        {
+            "name": "alexzam",
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#6b6b6b",
+            "brightBlack": "#5A6374",
+            "brightBlue": "#9c9c9c",
+            "brightCyan": "#56B6C2",
+            "brightGreen": "#56e1f3",
+            "brightPurple": "#C678DD",
+            "brightRed": "#E06C75",
+            "brightWhite": "#e2e2e2",
+            "brightYellow": "#333333",
+            "cyan": "#56B6C2",
+            "foreground": "#e2e2e2",
+            "green": "#56e1f3",
+            "purple": "#C678DD",
+            "red": "#E06C75",
+            "white": "#e2e2e2",
+            "yellow": "#56e1f3"
+        }
+    ],
+    "actions": [
+        {
+            "command": {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+        }
+    ],
+    "keybindings": []
+}
