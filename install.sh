@@ -1,6 +1,6 @@
 #!/bin/bash
 
-colorfull_echo() {
+colorful_echo() {
     GREEN="\033[0;32m"
     RED="\033[0;31m"
     NC="\033[0m" # No Color
@@ -16,9 +16,9 @@ colorfull_echo() {
 
 apt_install() {
     if hash $1 2>/dev/null; then
-        colorfull_echo "$1 is already installed" "RED"
+        colorful_echo "$1 is already installed" "RED"
     else
-        colorfull_echo "Installing $1" "GREEN"
+        colorful_echo "Installing $1" "GREEN"
         sudo apt-get install -y $1
     fi
 }
@@ -32,19 +32,19 @@ do
 done < "$input"
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
-    colorfull_echo "Installing oh-my-zsh" "GREEN"
+    colorful_echo "Installing oh-my-zsh" "GREEN"
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-    colorfull_echo "Installing zsh-autosuggestions" "GREEN"
+    colorful_echo "Installing zsh-autosuggestions" "GREEN"
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-    colorfull_echo "Installing zsh-syntax-highlighting" "GREEN"
+    colorful_echo "Installing zsh-syntax-highlighting" "GREEN"
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-    colorfull_echo "Installing zsh-z" "GREEN"
+    colorful_echo "Installing zsh-z" "GREEN"
     git clone https://github.com/agkozak/zsh-z ~/.oh-my-zsh/custom/plugins/zsh-z
 else
-    colorfull_echo "oh-my-zsh is already installed" "RED"
+    colorful_echo "oh-my-zsh is already installed" "RED"
 fi
 
-colorfull_echo "Setting up our System" "GREEN"
+colorful_echo "Setting up our System" "GREEN"
 # link all dotfiles
 cd .dotfiles
 # remove default .zshrc file

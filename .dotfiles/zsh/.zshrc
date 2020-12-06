@@ -7,6 +7,7 @@ plugins=(
     docker-compose
     extract
     git
+    python
     node
     npm
     yarn
