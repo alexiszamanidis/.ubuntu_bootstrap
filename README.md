@@ -13,9 +13,15 @@ cd
 bash install.sh
 ```
 
+If you want to have the aliases in bash terminal as well, you have to run:
+```
+cd 
+cat source_aliases >> ~/.bashrc
+```
+
 ### Windows Terminal
 
-If you are using Windows you can download **Windows Terminal** from **Microsoft Store**.
+If you are using ``Windows Subsystem for Linux`` you can download **Windows Terminal** from **Microsoft Store**.
 
 Set your Ubuntu System as default:
 

@@ -50,8 +50,8 @@ cd .dotfiles
 # remove default .zshrc file
 rm ~/.zshrc
 # unlink all files
-stow -vDt ~ bash git zsh
+stow -vDt ~ bash git zsh aliases
 # link all files
-stow -vSt ~ bash git zsh
+stow -vSt ~ bash git zsh aliases
 # make ZSH as default shell
 chsh -s $(which zsh)
