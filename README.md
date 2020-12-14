@@ -19,6 +19,14 @@ bash install.sh
 
 After running the installation commands open a new terminal.
 
+### New Default Path
+
+You can change the default prompt path by running the command below. The ``cd YOUR_NEW_DEFAULT_PATH`` will be appended to the .zshrc file, so you can modify it at any time.
+
+```
+echo -e "cd YOUR_NEW_DEFAULT_PATH" >> ~/.zshrc
+```
+
 ### Windows Terminal
 
 If you are using `Windows Subsystem for Linux` you can download **Windows Terminal** from **Microsoft Store**.
