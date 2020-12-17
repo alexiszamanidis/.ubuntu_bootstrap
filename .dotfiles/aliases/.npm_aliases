@@ -8,3 +8,5 @@ alias npu='npm update'
 alias npug='npm update -g'
 
 alias nps='npm search'
+
+alias npccf='npm cache clean --force'
