@@ -57,5 +57,18 @@
             "keys": "alt+shift+d"
         }
     ],
-    "keybindings": []
+    "keybindings": [
+        {
+          "command": { "action": "splitPane", "split": "auto" },
+          "keys": "ctrl+shift+-"
+        },
+        // if there is only one Pane it closes the tab
+        { "command": "closePane", "keys": "ctrl+w" },
+        { "command": "newTab", "keys": "ctrl+t" },
+        { "command": "commandPalette", "keys": "ctrl+shift+p" },
+    
+        // hide tabs
+        { "command": "toggleFocusMode", "keys": "ctrl+f11" }
+        // alt + enter = full screen
+      ]
 }
