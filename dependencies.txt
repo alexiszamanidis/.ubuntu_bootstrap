@@ -2,6 +2,7 @@ git
 curl
 vim
 htop
+tree
 python
 nodejs
 npm

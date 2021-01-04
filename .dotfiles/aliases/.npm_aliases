@@ -1,5 +1,5 @@
 alias np='npm'
-
+alias nps='npm start'
 alias npi='npm install'
 alias npis='npm install --save'
 alias npig='npm install -g'

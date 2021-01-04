@@ -1,0 +1,20 @@
+tc() {
+    touch $1
+    code $1
+}
+
+mkdircd() {
+    mkdir --p -- "$1"
+    cd -P -- "$1"
+}
+
+mkdirtouch() {
+    mkdir -p "$(dirname "$1")"
+    touch "$1"
+}
+
+mkdirtouchcd() {
+    mkdir -p "$(dirname "$1")"
+    touch "$1"  
+    cd "$(dirname "$1")"
+}

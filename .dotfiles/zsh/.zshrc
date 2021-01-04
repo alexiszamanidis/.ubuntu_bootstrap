@@ -47,3 +47,11 @@ fi
 if [ -f "$HOME/.git_aliases" ] ; then
     source "$HOME/.git_aliases"
 fi
+
+if [ -f "$HOME/.docker_aliases" ] ; then
+    source "$HOME/.docker_aliases"
+fi
+
+if [ -f "$HOME/.functions" ] ; then
+    source "$HOME/.functions"
+fi
