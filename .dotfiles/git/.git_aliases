@@ -2,6 +2,7 @@ alias gs='git status -sb'
 
 alias ga='git add'
 alias gr='git rm'
+alias diffc=diff --cached
 
 function gc { git commit -m "$@"; }
 alias gca='git commit --amend'
@@ -14,3 +15,24 @@ alias gcor='git checkout refactoring'
 
 alias gf='git fetch'
 alias gfa='git fetch --all'
+
+gacp() {
+    git add -A
+    git commit -m "$*"
+    git push
+}
+
+gaafp() {
+    git add -A
+    git commit --amend --no-edit
+    git push -f
+}
+
+# example: if we want to merge feature/A to dev
+# we run `gmp feature/A dev`
+gmp() {
+   git checkout $2
+   git merge $1
+   git push
+}
+
