@@ -1,4 +1,6 @@
 git
+snapd
+docker.io
 curl
 vim
 htop
