@@ -1,0 +1,15 @@
+christian-kohler.path-intellisense
+CoenraadS.bracket-pair-colorizer-2
+dsznajder.es7-react-js-snippets
+esbenp.prettier-vscode
+formulahendry.auto-close-tag
+formulahendry.auto-complete-tag
+formulahendry.auto-rename-tag
+humao.rest-client
+jolaleye.horizon-theme-vscode
+moppitz.vscode-extension-auto-import
+ms-vscode-remote.remote-wsl
+PKief.material-icon-theme
+pranaygp.vscode-css-peek
+streetsidesoftware.code-spell-checker
+TabNine.tabnine-vscode

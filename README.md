@@ -12,9 +12,11 @@ This repository contains a script that sets up a new Ubuntu System, as it instal
 ### Usage
 
 ```
+sudo apt install git
 git clone https://github.com/alexiszamanidis/.ubuntu_bootstrap.git ~/.ubuntu_bootstrap
 cd ~/.ubuntu_bootstrap
-bash install.sh
+bash install_dependencies.sh
+bash install_applications.sh
 ```
 
 After running the installation commands open a new terminal.

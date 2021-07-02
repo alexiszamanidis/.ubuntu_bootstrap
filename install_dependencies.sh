@@ -21,7 +21,7 @@ source ./functions.sh
 sudo apt update -y
 
 # install all the dependencies
-input="./dependencies.txt"
+input="./txt_files/dependencies.txt"
 while IFS= read -r line
 do
     apt_install $line
