@@ -1,6 +1,7 @@
-git
 snapd
 docker.io
+dpkg
+preload
 curl
 vim
 htop
