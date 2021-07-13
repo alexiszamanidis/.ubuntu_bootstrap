@@ -21,3 +21,5 @@
     added = green bold
     changed = yellow bold
     untracked = red bold
+[core]
+	editor = code --wait

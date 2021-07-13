@@ -22,3 +22,12 @@ apt_install() {
         sudo apt-get install -y $1
     fi
 }
+
+snap_install() {
+    if hash $1 2>/dev/null; then
+        colorful_echo "$1 is already installed" "RED"
+    else
+        colorful_echo "Installing $1" "GREEN"
+        sudo snap install $1
+    fi
+}
