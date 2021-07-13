@@ -46,8 +46,8 @@ cd .dotfiles
 # remove default .zshrc file
 rm ~/.zshrc
 # unlink all files
-stow -vDt ~ bash git zsh aliases
+stow -vDt ~ bash git zsh aliases functions docker vim
 # link all files
-stow -vSt ~ bash git zsh aliases
+stow -vSt ~ bash git zsh aliases functions docker vim
 # make ZSH as default shell
 chsh -s $(which zsh)
