@@ -1,6 +1,6 @@
 ## Ubuntu Bootstrap
 
-This repository contains a script that sets up a new Ubuntu System, as it installs many useful dependencies and synchronizes the dotfiles that I am currently using.
+This repository contains a script that sets up a new Ubuntu System, as it installs many useful packages, applications and synchronizes the dotfiles that I am currently using. There is also an update and clearing script.
 
 -   Bootstrap your new Ubuntu System
 -   Never reconfigure your System ever again
@@ -15,7 +15,7 @@ This repository contains a script that sets up a new Ubuntu System, as it instal
 sudo apt install git-all
 git clone https://github.com/alexiszamanidis/.ubuntu_bootstrap.git ~/.ubuntu_bootstrap
 cd ~/.ubuntu_bootstrap
-bash install_dependencies.sh
+bash install_packages.sh
 bash install_applications.sh
 ```
 

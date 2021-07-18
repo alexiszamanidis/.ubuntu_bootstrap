@@ -20,8 +20,8 @@ source ./functions.sh
 # updates the package lists for upgrades for packages that need upgrading
 sudo apt update -y
 
-# install all the dependencies
-input="./txt_files/dependencies.txt"
+# install all the packages
+input="./txt_files/packages.txt"
 while IFS= read -r line
 do
     apt_install $line
