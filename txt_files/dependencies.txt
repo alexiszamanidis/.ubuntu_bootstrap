@@ -1,4 +1,5 @@
 snapd
+trash-cli
 docker.io
 dpkg
 preload
