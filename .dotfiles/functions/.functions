@@ -24,24 +24,24 @@ notes() {
     readonly NOTES_EDITOR="vim"
     readonly NOTES_FILE_EXTENSION="md"
 
-    readonly NOTES_FILE="$(date +%Y-%m).${NOTES_FILE_EXTENSION}"
+    readonly DAY="$(date +%d-%A)"
+    readonly YEAR_MONTH="$(date +%B-%Y)"
+    readonly NOTES_FILE="${YEAR_MONTH}/${DAY}.${NOTES_FILE_EXTENSION}"
     readonly NOTES_PATH="${NOTES_DIRECTORY}/${NOTES_FILE}"
 
-    readonly DATE="$(date +%d-%m-%Y)"
 
-    if [ ! -d "${NOTES_DIRECTORY}" ]; then
-        mkdir -p "${NOTES_DIRECTORY}"
+    if [ ! -d "${NOTES_PATH}" ]; then
+        mkdir -p "$(dirname "${NOTES_PATH}")"
     fi
 
     if [ ${#} -eq 0 ]; then
         if [ -p "/dev/stdin" ]; then
-            (cat; printf "\n\n") >> "${DATE} ${NOTES_PATH}"
+            (cat; printf "\n\n") >> "${NOTES_PATH}"
         else
-            printf "%s\n\n" "${DATE}" >> "${NOTES_PATH}"
             eval "${NOTES_EDITOR}" "${NOTES_PATH}"
         fi
     else
-        printf "%s\n\n" "${DATE} ${*}" >> "${NOTES_PATH}"
+        printf "%s\n\n" "${*}" >> "${NOTES_PATH}"
     fi
 }
 
