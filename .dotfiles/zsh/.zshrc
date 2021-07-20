@@ -27,31 +27,14 @@ unstowth() {
     stow -vDt ~ $1
 }
 
+declare -a dotfiles=(".maven_aliases" ".npm_aliases" ".yarn_aliases" 
+                     ".bash_aliases" ".git_aliases" ".docker_aliases" 
+                     ".functions")
+
 # source global aliases
-if [ -f "$HOME/.maven_aliases" ] ; then
-    source "$HOME/.maven_aliases"
-fi
-
-if [ -f "$HOME/.npm_aliases" ] ; then
-    source "$HOME/.npm_aliases"
-fi
-
-if [ -f "$HOME/.yarn_aliases" ] ; then
-    source "$HOME/.yarn_aliases"
-fi
-
-if [ -f "$HOME/.bash_aliases" ] ; then
-    source "$HOME/.bash_aliases"
-fi
-
-if [ -f "$HOME/.git_aliases" ] ; then
-    source "$HOME/.git_aliases"
-fi
-
-if [ -f "$HOME/.docker_aliases" ] ; then
-    source "$HOME/.docker_aliases"
-fi
-
-if [ -f "$HOME/.functions" ] ; then
-    source "$HOME/.functions"
-fi
+for dotfile in "${dotfiles[@]}"
+do
+    if [ -f "$HOME/$dotfile" ] ; then
+        source "$HOME/$dotfile"
+    fi
+done
