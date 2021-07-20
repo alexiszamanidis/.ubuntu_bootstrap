@@ -22,4 +22,28 @@
     changed = yellow bold
     untracked = red bold
 [core]
-	editor = code --wait
+    editor = code --wait
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+    tool = vscode
+    conflictStyle = diff3
+[mergetool]
+    keepBackup = false
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+[pager]
+    branch = false
+[pull]
+    rebase = true
+[rebase]
+    autosquash = true
+    abbreviateCommands = true
+[rerere]
+    enabled = true
+[init]
+    defaultBranch = main
+[advice]
+    detachedHead = false
