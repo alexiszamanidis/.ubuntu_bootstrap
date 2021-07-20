@@ -1,6 +1,4 @@
 export ZSH="/home//.oh-my-zsh"
-# PATH is env variable which tells where to look for commands,in your case the npm bin was not at the right path
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 ZSH_THEME="robbyrussell"
 
