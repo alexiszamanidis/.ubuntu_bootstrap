@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # load functions.sh
-source ./functions.sh
+source ~/.ubuntu_bootstrap/functions.sh
 
 # update
 colorful_echo "Updating and Upgrading..." "GREEN"
