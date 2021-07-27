@@ -1,6 +1,7 @@
 snapd
 trash-cli
 docker.io
+flameshot
 dpkg
 preload
 curl
