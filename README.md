@@ -1,6 +1,6 @@
 ## Ubuntu Bootstrap
 
-This repository contains a script that sets up a new Ubuntu System, as it installs many useful packages, applications and synchronizes the dotfiles that I am currently using. There is also an update and clearing script(`update_and_clean_up`).
+This repository contains a script that sets up a new Ubuntu System, as it installs many useful packages, applications and synchronizes the dotfiles that I am currently using.
 
 -   Bootstrap your new Ubuntu System
 -   Never reconfigure your System ever again
@@ -28,6 +28,18 @@ You can change the default prompt path by running the command below. The ``cd YO
 ```
 echo -e "cd YOUR_NEW_DEFAULT_PATH" >> ~/.zshrc
 ```
+
+### Clearing script
+
+There is also an update and clearing script. 
+
+```
+update_and_clean_up
+```
+
+| Name    | Flag | Default | Description                                             |
+| ------- | ---- | ------- | ------------------------------------------------------- |
+| VSCODE  | \-v  | false   | This option is used for updating your vscode extensions |
 
 ### Windows Terminal
 

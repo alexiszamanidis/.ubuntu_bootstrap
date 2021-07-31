@@ -46,5 +46,5 @@ notes() {
 }
 
 update_and_clean_up() {
-    ~/.ubuntu_bootstrap/update_and_clean_up.sh
+    ~/.ubuntu_bootstrap/update_and_clean_up.sh "$@"
 }
