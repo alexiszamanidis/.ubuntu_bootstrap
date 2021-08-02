@@ -27,6 +27,10 @@ unstowth() {
     stow -vDt ~ $1
 }
 
+reload() {
+    source ~/.zshrc
+}
+
 declare -a dotfiles=(".maven_aliases" ".npm_aliases" ".yarn_aliases" 
                      ".bash_aliases" ".git_aliases" ".docker_aliases" 
                      ".functions")
@@ -38,3 +42,8 @@ do
         source "$HOME/$dotfile"
     fi
 done
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+bindkey '^P' fzf-file-widget
+export FZF_DEFAULT_COMMAND='find .'

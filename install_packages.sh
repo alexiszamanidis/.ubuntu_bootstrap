@@ -41,6 +41,15 @@ else
     colorful_echo "oh-my-zsh is already installed" "RED"
 fi
 
+# install fzf
+if [ ! -d "$HOME/.fzf" ]; then
+    colorful_echo "Installing fzf" "GREEN"
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+else
+    colorful_echo "fzf is already installed" "RED"
+fi
+
 colorful_echo "Setting up our System" "GREEN"
 cd .dotfiles
 # remove default .zshrc file
@@ -49,5 +58,11 @@ rm ~/.zshrc
 stow -vDt ~ bash git zsh aliases functions docker vim
 # link all files
 stow -vSt ~ bash git zsh aliases functions docker vim
+
+# download plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# install vim plugins
+vim +'PlugInstall --sync' +qa
+
 # make ZSH as default shell
 chsh -s $(which zsh)
