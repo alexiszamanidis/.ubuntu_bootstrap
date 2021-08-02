@@ -41,6 +41,11 @@ else
     colorful_echo "oh-my-zsh is already installed" "RED"
 fi
 
+# install fd
+colorful_echo "Installing zsh-z" "GREEN"
+wget https://github.com/sharkdp/fd/releases/download/v7.3.0/fd-musl_7.3.0_amd64.deb
+sudo dpkg -i fd-musl_7.3.0_amd64.deb
+
 # install fzf
 if [ ! -d "$HOME/.fzf" ]; then
     colorful_echo "Installing fzf" "GREEN"
