@@ -27,3 +27,25 @@ call plug#end()
 
 " this remap is used for fzf palette
 nnoremap <C-p> :Files<Cr>
+
+" save file
+inoremap <C-s> <esc>:w<cr>
+nnoremap <C-s> :w<cr>
+" save file and exit
+inoremap <C-d> <esc>:wq!<cr>
+nnoremap <C-d> :wq!<cr>
+" quit file discarding changes
+inoremap <C-q> <esc>:qa!<cr>
+nnoremap <C-q> :qa!<cr>
+" copy line
+inoremap <C-c> Y
+nnoremap <C-c> Y
+" paste
+" inoremap <C-v> p
+" nnoremap <C-v> p
+" delete line
+inoremap <C-x> dd
+nnoremap <C-x> dd
+" undo
+inoremap <C-z> u
+nnoremap <C-z> u

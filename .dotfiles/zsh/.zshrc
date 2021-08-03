@@ -49,3 +49,7 @@ bindkey '^P' fzf-file-widget
 export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --border --preview='bat --style=numbers --color=always --line-range :500 {}'"
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
+
+# these commands are used to enable vim remaps
+bindkey -r '\C-s'
+stty -ixon
