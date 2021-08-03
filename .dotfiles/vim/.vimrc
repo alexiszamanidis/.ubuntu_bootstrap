@@ -25,4 +25,5 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
+" this remap is used for fzf palette
 nnoremap <C-p> :Files<Cr>
