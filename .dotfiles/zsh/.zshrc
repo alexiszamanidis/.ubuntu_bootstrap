@@ -11,6 +11,10 @@ plugins=(
     node
     npm
     yarn
+    sudo
+    web-search
+    history
+    jsontools
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-z
