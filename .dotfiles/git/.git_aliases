@@ -12,6 +12,7 @@ alias gcod='git checkout dev'
 alias gcom='git checkout master'
 alias gcos='git checkout staging'
 alias gcor='git checkout refactoring'
+alias glog='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
 alias gf='git fetch'
 alias gfa='git fetch --all'
