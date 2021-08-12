@@ -31,7 +31,7 @@ echo -e "cd YOUR_NEW_DEFAULT_PATH" >> ~/.zshrc
 
 ### Clearing script
 
-There is also an update and clearing script. 
+There is also an update and clearing script.
 
 ```
 update_and_clean_up

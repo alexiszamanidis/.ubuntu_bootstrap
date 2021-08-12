@@ -47,8 +47,8 @@ reload() {
     source ~/.zshrc
 }
 
-declare -a dotfiles=(".maven_aliases" ".npm_aliases" ".yarn_aliases" 
-                     ".bash_aliases" ".git_aliases" ".docker_aliases" 
+declare -a dotfiles=(".maven_aliases" ".npm_aliases" ".yarn_aliases"
+                     ".bash_aliases" ".git_aliases" ".docker_aliases"
                      ".functions")
 
 # source global aliases

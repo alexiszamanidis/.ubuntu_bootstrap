@@ -37,4 +37,3 @@ gmp() {
    git merge $1
    git push
 }
-

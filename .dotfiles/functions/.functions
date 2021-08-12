@@ -15,7 +15,7 @@ mkdirtouch() {
 
 mkdirtouchcd() {
     mkdir -p "$(dirname "$1")"
-    touch "$1"  
+    touch "$1"
     cd "$(dirname "$1")"
 }
 

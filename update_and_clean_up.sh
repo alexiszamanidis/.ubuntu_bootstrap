@@ -8,7 +8,7 @@ while getopts :v options; do
   echo ${options}
   case $options in
     v) v=true;;
-    ?) 
+    ?)
       echo "Usage [-v]"
       exit 1;;
   esac
@@ -25,7 +25,7 @@ sudo apt-get dist-upgrade -y
 
 if [ "$v" = true ] ; then
     colorful_echo "Updating VSCODE extensions..." "GREEN"
-    code --list-extensions | 
+    code --list-extensions |
     while read extension;
     do
         colorful_echo "Updating $extension..." "GREEN"
