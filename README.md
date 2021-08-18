@@ -12,9 +12,9 @@ This repository contains a script that sets up a new Ubuntu System, as it instal
 ### Usage
 
 ```
-sudo apt install git-all && \
+sudo apt install -y git-all && \
 git clone https://github.com/alexiszamanidis/.ubuntu_bootstrap.git ~/.ubuntu_bootstrap && \
-bash ~/.ubuntu_bootstrap/install_packages.sh
+bash ~/.ubuntu_bootstrap/install.sh
 ```
 
 After running the installation commands open a new terminal.
