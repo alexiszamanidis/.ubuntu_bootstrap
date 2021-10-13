@@ -60,3 +60,12 @@ If you are using `Windows Subsystem for Linux` you can download **Windows Termin
 
 -   Open ``WindowsTerminal/settings.json``
 -   Add any field you want and check what suits you best
+
+### Txt Files
+
+| Name                  | Format  |
+| --------------------- | ------- |
+| apllications.txt      | name    |
+| packages.txt          | name    |
+| vscode_extensions.txt | name    |
+| chrome_extensions.txt | name id |
