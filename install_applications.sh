@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# load functions.sh
-source ./functions.sh
+# load helpers.sh
+source ./helpers.sh
 
 # updates the package lists for upgrades for packages that need upgrading
 sudo apt-get update -y

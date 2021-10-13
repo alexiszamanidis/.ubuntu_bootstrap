@@ -14,8 +14,8 @@ sed -i "s/name =/name = ${git_full_name}/g" ~/.ubuntu_bootstrap/.dotfiles/git/.g
 sed -i "s/email =/email = ${git_email}/g" ~/.ubuntu_bootstrap/.dotfiles/git/.gitconfig
 sed -i "s/${zshOld}/${zshNew}/g" ~/.ubuntu_bootstrap/.dotfiles/zsh/.zshrc
 
-# load functions.sh
-source ./functions.sh
+# load helpers.sh
+source ./helpers.sh
 
 # updates the package lists for upgrades for packages that need upgrading
 sudo apt update -y

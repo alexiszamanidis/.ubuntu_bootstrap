@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# load functions.sh
-source ./functions.sh
+# load helpers.sh
+source ./helpers.sh
 
 install_chrome_extension () {
   name=$1
