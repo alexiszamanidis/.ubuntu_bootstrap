@@ -15,7 +15,7 @@ sed -i "s/email =/email = ${git_email}/g" ~/.ubuntu_bootstrap/.dotfiles/git/.git
 sed -i "s/${zshOld}/${zshNew}/g" ~/.ubuntu_bootstrap/.dotfiles/zsh/.zshrc
 
 # load helpers.sh
-source ./helpers.sh
+source ~/.ubuntu_bootstrap/scripts/helpers.sh
 
 # updates the package lists for upgrades for packages that need upgrading
 sudo apt update -y

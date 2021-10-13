@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # load helpers.sh
-source ./helpers.sh
+source ~/.ubuntu_bootstrap/scripts/helpers.sh
 
 install_chrome_extension () {
   name=$1

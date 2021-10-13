@@ -15,7 +15,7 @@ while getopts :v options; do
 done
 
 # load helpers.sh
-source ~/.ubuntu_bootstrap/helpers.sh
+source ~/.ubuntu_bootstrap/scripts/helpers.sh
 
 # update
 colorful_echo "Updating and Upgrading..." "GREEN"
