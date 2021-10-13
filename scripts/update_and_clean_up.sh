@@ -14,8 +14,8 @@ while getopts :v options; do
   esac
 done
 
-# load functions.sh
-source ~/.ubuntu_bootstrap/functions.sh
+# load helpers.sh
+source ~/.ubuntu_bootstrap/scripts/helpers.sh
 
 # update
 colorful_echo "Updating and Upgrading..." "GREEN"
