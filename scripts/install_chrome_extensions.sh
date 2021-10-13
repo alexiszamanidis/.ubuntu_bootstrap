@@ -19,17 +19,11 @@ install_chrome_extension () {
   colorful_echo "${name}" "GREEN"
 }
 
-colorful_echo "Installing Chrome Extensions..." "GREEN"
+colorful_echo "Installing Chrome Extensions" "GREEN"
 
-# name - id
-install_chrome_extension "AdBlock" "gighmmpiobklfepjocnamgkkbiglidom"
-install_chrome_extension "Cookie Editor" "iphcomljdfghbkdcfndaijbokpgddeno"
-install_chrome_extension "daily.dev" "jlmpjdjjbgclbocgajdjefcidcncaied"
-install_chrome_extension "EditThisCookie" "fngmhnnpilhplaeedifhccceomclgfbg"
-install_chrome_extension "Eye Dropper" "hmdcmlfkchdmnmnmheododdhjedfccka"
-install_chrome_extension "ModHeader" "idgpnmonknjnojddfkpgkljpfnnfcklj"
-install_chrome_extension "React Developer Tools" "fmkadmapgofadopljbjfkapdkoienihi"
-install_chrome_extension "Video Speed Controller" "nffaoalbilbmmfgbnbgppjihopabppdk"
-install_chrome_extension "Wappalyzer" "gppongmhjkpfnbhagpmjfkannfbllamg"
-install_chrome_extension "JSON Viewer" "gbmdgpbipfallnflgajpaliibnhdgobh"
-install_chrome_extension "Grammarly" "kbfnbcaeplbcioakkpcpgfkobkghlhen"
+# install all the chrome extensions
+input="./txt_files/chrome_extensions.txt"
+while IFS=" " read -r name id
+do
+    install_chrome_extension $name $id
+done < "$input"
