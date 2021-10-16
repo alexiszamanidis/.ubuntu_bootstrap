@@ -60,6 +60,7 @@ If you are using `Windows Subsystem for Linux` you can download **Windows Termin
 
 -   Open ``WindowsTerminal/settings.json``
 -   Add any field you want and check what suits you best
+    - I have included the [Aura-Theme](https://github.com/daltonmenezes/aura-theme)
 
 ### Txt Files
 
