@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cd ~/.ubuntu_bootstrap
+cd ~/.ubuntu_bootstrap/scripts
 
-bash install_packages.sh
+bash install_packages.sh "$@"
 
 # if the running system is not WSL run the applications
 # and the chrome extensions installation scripts

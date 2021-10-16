@@ -5,6 +5,7 @@ flameshot
 dpkg
 preload
 curl
+wget
 vim
 htop
 tree

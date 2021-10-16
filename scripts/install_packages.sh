@@ -1,9 +1,27 @@
 #!/bin/bash
 
-# read user input
-read -p "Git Full name: " git_full_name
-read -p "Git Email: " git_email
-read -p "UNIX Username: " unix_username
+git_full_name="Alexis Zamanidis"
+git_email="alexiszamanidis@outlook.com"
+unix_username="alexzam"
+
+d=false # d: default
+
+# iterate throught user input arguments
+while getopts :d options; do
+  case $options in
+    d) d=true;;
+    ?)
+      echo "Usage [-d]"
+      exit 1;;
+  esac
+done
+
+if [ "$d" = false ] ; then
+    # read user input
+    read -p "Git Full name: " git_full_name
+    read -p "Git Email: " git_email
+    read -p "UNIX Username: " unix_username
+fi
 
 # prepare zsh file replacement
 zshOld="export ZSH=\"\/home\/\/.oh-my-zsh\""
@@ -21,7 +39,7 @@ source ~/.ubuntu_bootstrap/scripts/helpers.sh
 sudo apt update -y
 
 # install all the packages
-input="./txt_files/packages.txt"
+input="../txt_files/packages.txt"
 while IFS= read -r line
 do
     apt_install $line
@@ -59,7 +77,7 @@ else
 fi
 
 colorful_echo "Setting up our System" "GREEN"
-cd .dotfiles
+cd ../dotfiles
 # remove default .zshrc file
 rm ~/.zshrc
 # unlink all files

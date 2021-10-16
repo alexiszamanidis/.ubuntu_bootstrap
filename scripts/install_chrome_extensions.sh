@@ -22,7 +22,7 @@ install_chrome_extension () {
 colorful_echo "Installing Chrome Extensions" "GREEN"
 
 # install all the chrome extensions
-input="./txt_files/chrome_extensions.txt"
+input="../txt_files/chrome_extensions.txt"
 while IFS=" " read -r name id
 do
     install_chrome_extension $name $id
