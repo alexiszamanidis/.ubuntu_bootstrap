@@ -6,7 +6,7 @@ alias gr='git rm'
 alias diffc=diff --cached
 
 function gc { git commit -m "$@"; }
-alias gca='git commit --amend'
+alias gca='git commit --amend --no-edit'
 alias gcm='git commit -m'
 
 alias gcod='git checkout dev'
@@ -14,6 +14,10 @@ alias gcom='git checkout master'
 alias gcos='git checkout staging'
 alias gcor='git checkout refactoring'
 alias glog='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+
+alias gst='git stash'
+alias gsta='git stash apply'
+alias gstl='git stash list'
 
 alias gf='git fetch'
 alias gfa='git fetch --all'
@@ -30,6 +34,7 @@ gaafp() {
     git push -f
 }
 
+# gmp: git-merge-push
 # example: if we want to merge feature/A to dev
 # we run `gmp feature/A dev`
 gmp() {
@@ -37,4 +42,41 @@ gmp() {
    git pull
    git merge $1
    git push
+}
+
+# grp: git-rebase-push
+# get commits from the feature branch and
+# put them on to a destination(e.g master) branch
+# example: `grp feature/A dev`
+grp() {
+    git checkout $2
+    git pull
+    git checkout $1
+    git rebase $2
+    git checkout $2
+    git rebase $1
+    git push
+}
+
+gsquash() {
+    commits=10
+    if [ "$#" -eq  "1" ]
+    then
+        commits=$1
+    fi
+    command="git rebase -i HEAD~${commits}"
+    eval $command
+}
+
+gcoprev() {
+    git checkout -
+}
+
+gmprev() {
+    git merge -
+}
+
+gprune() {
+    git remote update --prune && \
+    git branch -vv | awk '/: gone]/{print $1}' | xargs --no-run-if-empty git branch -d
 }
