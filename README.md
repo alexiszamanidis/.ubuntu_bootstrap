@@ -14,7 +14,7 @@ This repository contains a script that sets up a new Ubuntu System, as it instal
 ```
 sudo apt install -y git-all && \
 git clone https://github.com/alexiszamanidis/.ubuntu_bootstrap.git ~/.ubuntu_bootstrap && \
-bash ~/.ubuntu_bootstrap/install.sh
+bash ~/.ubuntu_bootstrap/scripts/install.sh
 ```
 
 After running the installation commands open a new terminal.
