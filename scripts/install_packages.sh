@@ -63,9 +63,9 @@ cd .dotfiles
 # remove default .zshrc file
 rm ~/.zshrc
 # unlink all files
-stow -vDt ~ bash git zsh aliases functions docker vim
+stow -vDt ~ *
 # link all files
-stow -vSt ~ bash git zsh aliases functions docker vim
+stow -vSt ~ *
 
 # download plug.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
