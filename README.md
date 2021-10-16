@@ -7,13 +7,25 @@ This repository contains a script that sets up a new Ubuntu System, as it instal
 
 **The script is generic so that everyone can download and configure their system** as soon as possible. It will ask you to give your GIT Full name, Git email and UNIX username.
 
-**Tested on a new unmodified Windows Subsystem - Ubuntu 20.04 LTS**
-
 ### Usage
+
+#### Docker
+
+Before doing anything, you need to make sure that your machine can run the installation scripts.
+We can achieve this with Docker.
 
 ```
 sudo apt install -y git-all && \
 git clone https://github.com/alexiszamanidis/.ubuntu_bootstrap.git ~/.ubuntu_bootstrap && \
+bash ~/.ubuntu_bootstrap/scripts/docker.sh
+```
+
+#### Installation
+
+After successfully executing the script in Docker Container, you can copy the following command and
+bootstrap your system.
+
+```
 bash ~/.ubuntu_bootstrap/scripts/install.sh
 ```
 
