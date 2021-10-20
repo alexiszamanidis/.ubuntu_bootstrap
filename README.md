@@ -29,6 +29,14 @@ bootstrap your system.
 bash ~/.ubuntu_bootstrap/scripts/install.sh
 ```
 
+If you are sure that the installation scripts can run to your machine execute the following commands.
+
+```
+sudo apt install -y git-all && \
+git clone https://github.com/alexiszamanidis/.ubuntu_bootstrap.git ~/.ubuntu_bootstrap && \
+bash ~/.ubuntu_bootstrap/scripts/install.sh
+```
+
 After running the installation commands open a new terminal.
 
 ### New Default Path
@@ -77,8 +85,8 @@ If you are using `Windows Subsystem for Linux` you can download **Windows Termin
 ### Txt Files
 
 | Name                  | Format  |
-| --------------------- | ------- |
-| apllications.txt      | name    |
-| packages.txt          | name    |
-| vscode_extensions.txt | name    |
-| chrome_extensions.txt | name id |
+| --------------------- | ---------- |
+| apllications.txt      | name --flags |
+| packages.txt          | name         |
+| vscode_extensions.txt | name         |
+| chrome_extensions.txt | name id      |
