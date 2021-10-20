@@ -78,7 +78,7 @@ If you are using `Windows Subsystem for Linux` you can download **Windows Termin
 
 **More custom settings**:
 
--   Open ``WindowsTerminal/settings.json``
+-   Open ``windows_terminal/settings.json``
 -   Add any field you want and check what suits you best
     - I have included the [Aura-Theme](https://github.com/daltonmenezes/aura-theme)
 
