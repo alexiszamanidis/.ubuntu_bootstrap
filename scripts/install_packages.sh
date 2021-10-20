@@ -92,3 +92,5 @@ vim +'PlugInstall --sync' +qa
 
 # make ZSH as default shell
 chsh -s $(which zsh)
+# if the above command not working then run the following one
+# echo -e "cd YOUR_NEW_DEFAULT_PATH" >> ~/.zshrc
