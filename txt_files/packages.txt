@@ -5,6 +5,7 @@ flameshot
 dpkg
 preload
 curl
+kitty
 wget
 vim
 htop
