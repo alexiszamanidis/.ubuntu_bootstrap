@@ -42,7 +42,7 @@ sudo apt update -y
 input="../txt_files/packages.txt"
 while IFS= read -r line
 do
-    apt_install $line
+    apt_install "$line"
 done < "$input"
 
 # install .oh-my-zsh and its plugins

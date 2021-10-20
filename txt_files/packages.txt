@@ -18,3 +18,4 @@ maven
 default-jdk
 stow
 zsh
+postgresql postgresql-contrib

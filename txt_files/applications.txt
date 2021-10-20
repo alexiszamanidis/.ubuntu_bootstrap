@@ -3,3 +3,4 @@ spotify
 postman
 code --classic
 slack --classic
+kubectl --classic

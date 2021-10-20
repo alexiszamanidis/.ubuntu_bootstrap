@@ -84,9 +84,9 @@ If you are using `Windows Subsystem for Linux` you can download **Windows Termin
 
 ### Txt Files
 
-| Name                  | Format  |
-| --------------------- | ---------- |
+| Name                  | Format       |
+| --------------------- | ------------ |
 | apllications.txt      | name --flags |
-| packages.txt          | name         |
+| packages.txt          | name --flags |
 | vscode_extensions.txt | name         |
 | chrome_extensions.txt | name id      |
