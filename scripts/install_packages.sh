@@ -78,10 +78,6 @@ fi
 
 colorful_echo "Setting up our System" "GREEN"
 
-# kitty theme
-cp ../kitty/theme.conf ~/.config/kitty
-echo "include aura-theme.conf" >> ~/.config/kitty/kitty.conf
-
 cd ../dotfiles
 # remove default .zshrc file
 rm ~/.zshrc
