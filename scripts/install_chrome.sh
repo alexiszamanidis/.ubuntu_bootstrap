@@ -19,9 +19,12 @@ install_chrome_extension () {
   colorful_echo "${name}" "GREEN"
 }
 
-colorful_echo "Installing Chrome Extensions" "GREEN"
+colorful_echo "Installing Chrome" "GREEN"
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+rm -rf google-chrome-stable_current_amd64.deb
 
-# install all the chrome extensions
+colorful_echo "Installing Chrome Extensions" "GREEN"
 input="../txt_files/chrome_extensions.txt"
 while IFS=" " read -r name id
 do
