@@ -30,3 +30,5 @@ while IFS=" " read -r name id
 do
     install_chrome_extension $name $id
 done < "$input"
+
+exit 0

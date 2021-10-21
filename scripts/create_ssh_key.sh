@@ -18,3 +18,5 @@ cat ~/.ssh/id_rsa.pub
 colorful_echo "\nAdd your public key to:" "GREEN"
 colorful_echo "GitHub: https://github.com/settings/ssh/new" "GREEN"
 colorful_echo "GitLab: https://gitlab.com/-/profile/keys" "GREEN"
+
+exit 0

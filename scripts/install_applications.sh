@@ -22,3 +22,5 @@ do
     colorful_echo "code --install-extension $line" "GREEN"
     code --install-extension $line
 done < "$input"
+
+exit 0
