@@ -35,8 +35,7 @@ sed -i "s/${zshOld}/${zshNew}/g" ~/.ubuntu_bootstrap/.dotfiles/zsh/.zshrc
 # load helpers.sh
 source ~/.ubuntu_bootstrap/scripts/helpers.sh
 
-# updates the package lists for upgrades for packages that need upgrading
-sudo apt update -y
+update_and_upgrade
 
 # install all packages needed
 declare -a packages=("dpkg" "curl" "wget"
@@ -82,7 +81,6 @@ colorful_echo "Setting up our System" "GREEN"
 cd ../.dotfiles
 # remove default .zshrc file
 rm ~/.zshrc
-pwd
 # unlink all files
 stow -vDt ~ *
 # link all files

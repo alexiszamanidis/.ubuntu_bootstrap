@@ -31,3 +31,10 @@ snap_install() {
         sudo snap install $1
     fi
 }
+
+update_and_upgrade() {
+    colorful_echo "Updating and Upgrading" "GREEN"
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
+    sudo apt-get dist-upgrade -y
+}

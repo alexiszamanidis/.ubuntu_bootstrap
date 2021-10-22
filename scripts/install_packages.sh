@@ -3,8 +3,7 @@
 # load helpers.sh
 source ~/.ubuntu_bootstrap/scripts/helpers.sh
 
-# updates the package lists for upgrades for packages that need upgrading
-sudo apt update -y
+update_and_upgrade
 
 # install all the packages
 input="../txt_files/packages.txt"

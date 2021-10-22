@@ -1,4 +1,3 @@
-snapd
 trash-cli
 docker.io
 flameshot
