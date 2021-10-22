@@ -2,11 +2,7 @@ snapd
 trash-cli
 docker.io
 flameshot
-dpkg
 preload
-curl
-wget
-vim
 htop
 tree
 python
@@ -15,6 +11,3 @@ npm
 yarn
 maven
 default-jdk
-stow
-zsh
-postgresql postgresql-contrib
