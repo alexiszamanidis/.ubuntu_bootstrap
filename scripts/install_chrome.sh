@@ -19,8 +19,7 @@ install_chrome_extension () {
 # load helpers.sh
 source ~/.ubuntu_bootstrap/scripts/helpers.sh
 
-declare -a packages=("dpkg" "wget")
-install_packages packages
+update_and_upgrade
 
 colorful_echo "Installing Chrome" "GREEN"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb

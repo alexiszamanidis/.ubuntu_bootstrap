@@ -3,8 +3,7 @@
 # load helpers.sh
 source ~/.ubuntu_bootstrap/scripts/helpers.sh
 
-declare -a packages=("kitty")
-install_packages packages
+apt_install "kitty"
 
 cp -R ../kitty ~/.config/
 

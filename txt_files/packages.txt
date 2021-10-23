@@ -3,6 +3,12 @@ docker.io
 flameshot
 preload
 htop
+dpkg
+curl
+wget
+vim
+stow
+snapd
 tree
 python
 nodejs
@@ -10,3 +16,4 @@ npm
 yarn
 maven
 default-jdk
+zsh

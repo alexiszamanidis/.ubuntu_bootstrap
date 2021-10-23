@@ -5,7 +5,6 @@ source ~/.ubuntu_bootstrap/scripts/helpers.sh
 
 update_and_upgrade
 
-apt_install snapd
 snap_install "code --classic"
 
 # install all vscode extensions

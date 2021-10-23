@@ -2,15 +2,26 @@
 
 cd ~/.ubuntu_bootstrap/scripts
 
-bash install_packages.sh "$@"
+bash install_packages.sh
 
-# if the running system is not WSL run the applications
-# and the chrome installation scripts
-if [[ ! -n "$IS_WSL" && ! -n "$WSL_DISTRO_NAME" ]]; then
-    bash install_applications.sh
-    # sudo bash install_chrome.sh
+bash dotfiles.sh "$@"
+
+# if the running system is WSL exit
+if [[ ! -e "$IS_WSL" && ! -e "$WSL_DISTRO_NAME" ]]; then
+    cd $OLDPWD
+    exit 0
 fi
+
+bash install_applications.sh
+
+bash kitty.sh
+
+bash install_vscode.sh
+
+sudo bash install_chrome.sh
 
 bash update_and_clean_up.sh
 
 cd $OLDPWD
+
+exit 0

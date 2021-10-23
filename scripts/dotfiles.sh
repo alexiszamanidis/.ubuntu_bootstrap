@@ -35,9 +35,7 @@ sed -i "s/${zshOld}/${zshNew}/g" ~/.ubuntu_bootstrap/.dotfiles/zsh/.zshrc
 # load helpers.sh
 source ~/.ubuntu_bootstrap/scripts/helpers.sh
 
-declare -a packages=("dpkg" "curl" "wget"
-                     "vim" "stow" "zsh")
-install_packages packages
+update_and_upgrade
 
 # install .oh-my-zsh and its plugins
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -87,7 +85,5 @@ vim +'PlugInstall --sync' +qa
 
 # make ZSH as default shell
 chsh -s $(which zsh)
-# if the above command not working then run the following one
-# echo -e "exec zsh" >> ~/.bashrc
 
 exit 0
