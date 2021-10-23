@@ -3,9 +3,8 @@
 # load helpers.sh
 source ~/.ubuntu_bootstrap/scripts/helpers.sh
 
-update_and_upgrade
-
-apt_install snapd
+declare -a packages=("snapd")
+install_packages packages
 
 # install all the applications
 input="../txt_files/applications.txt"

@@ -1,5 +1,33 @@
 #!/bin/bash
 
+install_packages() {
+    # load helpers.sh
+    source ~/.ubuntu_bootstrap/scripts/helpers.sh
+
+    update_and_upgrade
+
+    packages=$1
+
+    for package in "${packages[@]}"
+    do
+        apt_install "$package"
+    done
+}
+
+install_apps() {
+    # load helpers.sh
+    source ~/.ubuntu_bootstrap/scripts/helpers.sh
+
+    update_and_upgrade
+
+    apps=$1
+
+    for app in "${apps[@]}"
+    do
+        snap_install "$app"
+    done
+}
+
 colorful_echo() {
     GREEN="\033[0;32m"
     RED="\033[0;31m"

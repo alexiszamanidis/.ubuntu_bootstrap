@@ -35,15 +35,9 @@ sed -i "s/${zshOld}/${zshNew}/g" ~/.ubuntu_bootstrap/.dotfiles/zsh/.zshrc
 # load helpers.sh
 source ~/.ubuntu_bootstrap/scripts/helpers.sh
 
-update_and_upgrade
-
-# install all packages needed
 declare -a packages=("dpkg" "curl" "wget"
                      "vim" "stow" "zsh")
-for package in "${packages[@]}"
-do
-    apt_install "$package"
-done
+install_packages packages
 
 # install .oh-my-zsh and its plugins
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
