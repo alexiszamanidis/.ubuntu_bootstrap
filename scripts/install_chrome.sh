@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# load helpers.sh
-source ~/.ubuntu_bootstrap/scripts/helpers.sh
-
 install_chrome_extension () {
   name=$1
   id=$2
@@ -18,6 +15,14 @@ install_chrome_extension () {
 
   colorful_echo "${name}" "GREEN"
 }
+
+# load helpers.sh
+source ~/.ubuntu_bootstrap/scripts/helpers.sh
+
+update_and_upgrade
+
+apt_install wget
+apt_install dpkg
 
 colorful_echo "Installing Chrome" "GREEN"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
