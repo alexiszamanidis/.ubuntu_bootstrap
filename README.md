@@ -41,23 +41,11 @@ After running the installation commands open a new terminal.
 
 ### New Default Path
 
-You can change the default prompt path by running the command below. The ``cd YOUR_NEW_DEFAULT_PATH`` will be appended to the .zshrc file, so you can modify it at any time.
+You can change the default prompt path by running the command below. The `cd YOUR_NEW_DEFAULT_PATH` will be appended to the .zshrc file, so you can modify it at any time.
 
 ```
 echo -e "cd YOUR_NEW_DEFAULT_PATH" >> ~/.zshrc
 ```
-
-### Clearing script
-
-There is also an update and clearing script.
-
-```
-update_and_clean_up
-```
-
-| Name    | Flag | Default | Description                                             |
-| ------- | ---- | ------- | ------------------------------------------------------- |
-| VSCODE  | \-v  | false   | This option is used for updating your vscode extensions |
 
 ### Windows Terminal
 
@@ -78,9 +66,9 @@ If you are using `Windows Subsystem for Linux` you can download **Windows Termin
 
 **More custom settings**:
 
--   Open ``windows_terminal/settings.json``
+-   Open `windows_terminal/settings.json`
 -   Add any field you want and check what suits you best
-    - I have included the [Aura-Theme](https://github.com/daltonmenezes/aura-theme)
+    -   I have included the [Aura-Theme](https://github.com/daltonmenezes/aura-theme)
 
 ### Txt Files
 
@@ -90,3 +78,7 @@ If you are using `Windows Subsystem for Linux` you can download **Windows Termin
 | packages.txt          | name --flags |
 | vscode_extensions.txt | name         |
 | chrome_extensions.txt | name id      |
+
+### Scripts
+
+[Read more](https://github.com/alexiszamanidis/.ubuntu_bootstrap/blob/master/SCRIPTS.md)
