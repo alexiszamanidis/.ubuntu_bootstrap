@@ -34,16 +34,16 @@ gaafp() {
 }
 
 # gmp: git-merge-push
-# example: if we want to merge feature/A to dev
-# we run `gmp feature/A dev`
+# merge feature/A to dev
+# example: `gmp feature/A dev`
 gmp() {
    git checkout $2
    git pull
    git merge $1
    git push
 }
-# `gm feature/A dev`
-gm() {
+# example: `gmerge feature/A dev`
+gmerge() {
    git checkout $2
    git pull
    git merge $1
@@ -63,8 +63,8 @@ grp() {
     git rebase $1
     git push
 }
-# `gr feature/A dev`
-gr() {
+# example: `grebase feature/A dev`
+grebase() {
     git checkout $2
     git pull
     git checkout $1
