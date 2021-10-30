@@ -23,10 +23,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+Plug 'preservim/nerdtree'
+
 call plug#end()
 
 " this remap is used for fzf palette
 nnoremap <C-p> :Files<Cr>
+
+" nerd tree
+nnoremap <C-b> :NERDTreeToggle<CR>
 
 " save file
 inoremap <C-s> <esc>:w<cr>
