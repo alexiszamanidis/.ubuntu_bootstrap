@@ -13,7 +13,8 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-set paste
+" there is a bug with 'jiangmiao/auto-pairs' plugin
+" set paste
 set hlsearch
 
 set colorcolumn=80
@@ -25,6 +26,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'preservim/nerdtree'
+Plug 'farmergreg/vim-lastplace'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
