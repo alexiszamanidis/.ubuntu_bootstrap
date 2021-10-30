@@ -6,6 +6,8 @@ bash install_packages.sh
 
 bash dotfiles.sh "$@"
 
+bash config.sh
+
 # if the running system is WSL exit
 if [[ ! -e "$IS_WSL" && ! -e "$WSL_DISTRO_NAME" ]]; then
     cd $OLDPWD
@@ -13,8 +15,6 @@ if [[ ! -e "$IS_WSL" && ! -e "$WSL_DISTRO_NAME" ]]; then
 fi
 
 bash install_applications.sh
-
-bash kitty.sh
 
 bash install_vscode.sh
 

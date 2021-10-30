@@ -2,7 +2,6 @@ alias gs='git status'
 alias gdc='git diff --cached'
 
 alias ga='git add'
-alias gr='git rm'
 alias diffc=diff --cached
 
 function gc { git commit -m "$@"; }
@@ -43,6 +42,13 @@ gmp() {
    git merge $1
    git push
 }
+# `gm feature/A dev`
+gm() {
+   git checkout $2
+   git pull
+   git merge $1
+   # git push
+}
 
 # grp: git-rebase-push
 # get commits from the feature branch and
@@ -56,6 +62,16 @@ grp() {
     git checkout $2
     git rebase $1
     git push
+}
+# `gr feature/A dev`
+gr() {
+    git checkout $2
+    git pull
+    git checkout $1
+    git rebase $2
+    git checkout $2
+    git rebase $1
+    # git push
 }
 
 gsquash() {

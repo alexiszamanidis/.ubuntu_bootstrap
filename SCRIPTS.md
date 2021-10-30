@@ -28,9 +28,12 @@ Synchronizes all dotfiles
 
 Installs google chrome and its extensions
 
-`install_kitty.sh`
+`config.sh`
 
-Installs kitty and configures it
+Adjusts the `~/.config` folder
+
+-   Installs kitty and configures it
+-   Installs neovim and configures it
 
 `install_vscode.sh`
 
