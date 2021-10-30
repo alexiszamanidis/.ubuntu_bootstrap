@@ -34,6 +34,9 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 
 source $ZSH/oh-my-zsh.sh
 
+alias v="nvim"
+alias s="sudo"
+
 # stow (th stands for target=home)
 stowth() {
     stow -vSt ~ $1
@@ -45,6 +48,10 @@ unstowth() {
 
 reload() {
     source ~/.zshrc
+}
+
+update_and_clean_up() {
+    ~/.ubuntu_bootstrap/scripts/update_and_clean_up.sh "$@"
 }
 
 declare -a dotfiles=(".maven_aliases" ".npm_aliases" ".yarn_aliases"
