@@ -56,7 +56,7 @@ if [ ! -d "$HOME/.fzf" ]; then
     colorful_echo "Installing fzf" "GREEN"
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
-    colorful_echo "Installing zsh-z" "GREEN"
+    colorful_echo "Installing fd" "GREEN"
     wget https://github.com/sharkdp/fd/releases/download/v7.3.0/fd-musl_7.3.0_amd64.deb
     sudo dpkg -i fd-musl_7.3.0_amd64.deb
     rm -rf fd-musl_7.3.0_amd64.deb
