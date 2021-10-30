@@ -14,6 +14,7 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set paste
+set hlsearch
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -32,6 +33,18 @@ nnoremap <C-p> :Files<Cr>
 
 " nerd tree
 nnoremap <C-b> :NERDTreeToggle<CR>
+
+" Keeping it centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" move line up-down
+nnoremap <A-Down> :m .+1<CR>==
+nnoremap <A-Up> :m .-2<CR>==
+inoremap <A-Down> <Esc>:m .+1<CR>==gi
+inoremap <A-Up> <Esc>:m .-2<CR>==gi
+vnoremap <A-Down> :m '>+1<CR>gv=gv
+vnoremap <A-Up> :m '<-2<CR>gv=gv
 
 " save file
 inoremap <C-s> <esc>:w<cr>
