@@ -1,4 +1,4 @@
-export ZSH="/home//.oh-my-zsh"
+export ZSH="/home//.oh-my-zsh" # //no-commit
 
 ZSH_THEME="robbyrussell"
 
