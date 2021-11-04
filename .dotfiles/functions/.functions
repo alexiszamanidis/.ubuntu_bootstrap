@@ -44,3 +44,15 @@ notes() {
         printf "%s\n\n" "${*}" >> "${NOTES_PATH}"
     fi
 }
+
+kill_process_on_port() {
+    if [ ! $# -eq 1 ]
+    then
+        echo "No port was supplied"
+        echo "e.g. kill_process_on_port 3000"
+        return -1
+    fi
+    port=$1
+    command="sudo kill -9 \$(sudo lsof -t -i:$port)"
+    eval $command
+}
