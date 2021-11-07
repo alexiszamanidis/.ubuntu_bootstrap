@@ -12,6 +12,10 @@ alias gcod='git checkout dev'
 alias gcom='git checkout master'
 alias gcos='git checkout staging'
 alias gcor='git checkout refactoring'
+gcoprev() {
+    git checkout -
+}
+
 alias glog='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
 alias gst='git stash'
@@ -20,6 +24,13 @@ alias gstl='git stash list'
 
 alias gf='git fetch'
 alias gfa='git fetch --all'
+
+gwta() {
+    command="git worktree add ./$1 $1"
+    eval $command
+}
+alias gwtr='git worktree remove'
+alias gwtp='git worktree prune'
 
 gacp() {
     git add -A
@@ -82,10 +93,6 @@ gsquash() {
     fi
     command="git rebase -i HEAD~${commits}"
     eval $command
-}
-
-gcoprev() {
-    git checkout -
 }
 
 gmprev() {
