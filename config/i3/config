@@ -147,8 +147,8 @@ bindsym $mod+Shift+5 move container to workspace $workspaces5
 bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to $workspaces9
-bindsym $mod+Shift+0 move container to $workspaces10
+bindsym $mod+Shift+9 move container to workspace $workspaces9
+bindsym $mod+Shift+0 move container to workspace $workspaces10
 
 # type 'xrandr' to find the hotkeys of the monitors
 
@@ -186,7 +186,7 @@ bindsym $mod+x mode "$mode_system"
 mode "$mode_system" {
   bindsym l exec i3lock
   bindsym e exec i3-msg exit
-  bindsym s exec --no-startup-id systemctl suspend; mode "default"
+  bindsym s exec systemctl poweroff
   bindsym r exec systemctl reboot
 
   # back to normal: Enter or Escape
