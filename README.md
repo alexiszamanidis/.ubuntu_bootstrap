@@ -79,10 +79,6 @@ If you are using `Windows Subsystem for Linux` you can download **Windows Termin
 | vscode_extensions.txt | name         |
 | chrome_extensions.txt | name id      |
 
-### Fonts
-
--   [Link](https://fontawesome.com/v5/cheatsheet)
-
 ### Scripts
 
 [Read more](https://github.com/alexiszamanidis/.ubuntu_bootstrap/blob/master/SCRIPTS.md)

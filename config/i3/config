@@ -118,13 +118,13 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-set $workspaces1 "1:  chrome"
-set $workspaces2 "2:  vscode"
-set $workspaces3 "3:  terminal"
-set $workspaces4 "4:  slack"
-set $workspaces5 "5:  vpn"
-set $workspaces9 "9:  chrome-fun"
-set $workspaces10 "10:  spotify"
+set $workspaces1 "1: chrome"
+set $workspaces2 "2: vscode"
+set $workspaces3 "3: terminal"
+set $workspaces4 "4: slack"
+set $workspaces5 "5: vpn"
+set $workspaces9 "9: chrome-2"
+set $workspaces10 "10: spotify"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspaces1
