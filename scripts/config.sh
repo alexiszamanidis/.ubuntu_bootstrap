@@ -3,14 +3,13 @@
 # load helpers.sh
 source ~/.ubuntu_bootstrap/scripts/helpers.sh
 
-declare -a packages=("kitty" "neovim")
+declare -a packages=("kitty" "neovim"
+                                #   i3 packages
+                                   "i3" "rofi" "compton" "compton" "i3blocks" "feh")
 
 install_packages packages
 
-declare -a i3_packages=("i3" "rofi" "compton" "compton" "i3blocks" "feh")
-
-install_packages i3_packages
-
+# i3
 mkdir ~/.fonts
 cp -R ../fonts/. ~/.fonts/
 
