@@ -9,6 +9,7 @@ declare -a packages=("kitty" "neovim"
 
 install_packages packages
 
-cp -R ../config/. ~/.config/
+stow -vDt ~/.config ../config
+stow -vSt ~/.config ../config
 
 exit 0
