@@ -31,3 +31,4 @@ alias runp="lsof -i "
 alias md="mkdir "
 alias h='history'
 alias j='jobs -l'
+alias settings='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
