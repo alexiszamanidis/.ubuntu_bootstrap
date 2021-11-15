@@ -31,6 +31,7 @@ gwta() {
 }
 alias gwtr='git worktree remove'
 alias gwtp='git worktree prune'
+alias gwt_enable_fetch="git config remote.origin.fetch 'refs/heads/*:refs/heads/*'"
 
 gacp() {
     git add -A
