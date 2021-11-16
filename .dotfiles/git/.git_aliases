@@ -25,12 +25,14 @@ alias gstl='git stash list'
 alias gf='git fetch'
 alias gfa='git fetch --all'
 
-gwta() {
-    command="git worktree add ./$1 $1"
-    eval $command
-}
+# gwta() {
+#     command="git worktree add ./$1 $1"
+#     eval $command
+# }
+alias gwta='git worktree add'
 alias gwtr='git worktree remove'
 alias gwtp='git worktree prune'
+alias gwtl='git worktree list'
 alias gwt_enable_fetch="git config remote.origin.fetch 'refs/heads/*:refs/heads/*'"
 
 gacp() {
