@@ -82,3 +82,10 @@ If you are using `Windows Subsystem for Linux` you can download **Windows Termin
 ### Scripts
 
 [Read more](https://github.com/alexiszamanidis/.ubuntu_bootstrap/blob/master/SCRIPTS.md)
+
+# Deprecated Repository
+
+This repository is deprecated. Please check out the links below:
+
+-   [ansible](https://github.com/alexiszamanidis/ansible)
+-   [dotfiles](https://github.com/alexiszamanidis/dotfiles)
